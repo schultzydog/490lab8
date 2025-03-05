@@ -37,6 +37,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   my_new_project:
-    # Applies to all files under models/example/
-    example:
-      +materialized: table
+    +schema: dbt_aschultz  # Ensure models go into the correct schema
+
+    lab8:
+      +materialized: table  # Applies to all models in models/lab8/
